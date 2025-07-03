@@ -1,0 +1,6 @@
+# requirements.txt
+
+MASM / TASM / NASM assembler
+(Optional) EMU8086 emulator
+(Optional) DOSBox for running 16-bit programs on modern systems
+Text editor or IDE (e.g., VS Code, Sublime, Notepad++)
