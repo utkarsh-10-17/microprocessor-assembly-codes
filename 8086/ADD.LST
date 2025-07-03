@@ -1,0 +1,52 @@
+Microsoft (R) Macro Assembler Version 5.00                  2/21/24 15:26:12
+                                                             Page     1-1
+
+
+				ASSUME CS: CODE , DS: DATA 
+ 0000				DATA SEGMENT 
+ 0000  04			  NO1 DB 04H 
+ 0001  06			   NO2 DB 06H 
+ 0002				 DATA ENDS 
+ 0000				 CODE SEGMENT 
+ 0000				 START: 
+ 0500				 ORG 500H 
+ 0500  B8 ---- R		   MOV AX,DATA 
+ 0503  8E D8			   MOV DS,AX 
+ 0505  A0 0000 R		   MOV AL,NO1 
+ 0508  8A 1E 0001 R		   MOV BL,NO2 
+ 050C  02 C3			   ADD AL,BL 
+ 050E  B4 4C			   mov ah,4ch 
+ 0510  CD 21			   INT 21H 
+ 0512				 CODE ENDS 
+				 END START 
+Microsoft (R) Macro Assembler Version 5.00                  2/21/24 15:26:12
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE . . . . . . . . . . . . . .  	0512	PARA	NONE	
+DATA . . . . . . . . . . . . . .  	0002	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+NO1  . . . . . . . . . . . . . .  	L BYTE	0000	DATA
+NO2  . . . . . . . . . . . . . .  	L BYTE	0001	DATA
+
+START  . . . . . . . . . . . . .  	L NEAR	0000	CODE
+
+@FILENAME  . . . . . . . . . . .  	TEXT  add		
+
+
+     17 Source  Lines
+     17 Total   Lines
+      7 Symbols
+
+  51222 + 465322 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors
